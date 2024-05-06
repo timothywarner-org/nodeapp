@@ -1,6 +1,7 @@
 name: Build and Test
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -39,4 +40,6 @@ jobs:
 
       - name: Deploy to Azure
         run: |
-          az webapp up --name <your-app-name> --resource-group <your-resource-group> --plan <your-app-service-plan>
+          az webapp up --name tworeillynode1 --resource-group actions-rg --plan tworeillynode1asp
+
+      # deploy using an arm template too
