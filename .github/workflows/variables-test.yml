@@ -1,0 +1,26 @@
+name: GitHub Environment Variables Demo
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  env-vars:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Display GitHub environment variables
+        run: |
+          echo "GitHub Repository: ${{ github.repository }}"
+          echo "GitHub Run ID: ${{ github.run_id }}"
+          echo "GitHub Run Number: ${{ github.run_number }}"
+          echo "GitHub Actor: ${{ github.actor }}"
+          echo "GitHub Workflow: ${{ github.workflow }}"
+          echo "GitHub Head Ref: ${{ github.head_ref }}"
+          echo "GitHub Base Ref: ${{ github.base_ref }}"
+          echo "GitHub Event Name: ${{ github.event_name }}"
