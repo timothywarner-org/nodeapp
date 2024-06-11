@@ -12,11 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "*",
-    "express-handlebars": "3.0.0",
-    "tedious": "^11.4.0"
+    "express-handlebars": "5.3.1",
+    "tedious": "^18.2.0"
   },
   "devDependencies": {
-    "mocha": "5.2.0",
+    "mocha": "10.4.0",
     "chai": "4.2.0",
     "chai-http": "4.2.0"
   },
